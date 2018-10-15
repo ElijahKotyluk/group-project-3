@@ -1,3 +1,4 @@
+.env
 /public/build.js
 /public/index.bundle.css
 .DS_Store
