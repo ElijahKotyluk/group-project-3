@@ -1,11 +1,11 @@
 /*
- * This file is used to build the API routes, we may have 
+ * This file is used to build the API routes, we may have
  * different routes for views and the like
  */
 
 const express = require('express')
 
-const userRoutes = require('./users') //use the user route shit
+const userRoutes = require('./users') //use the user routes
 
 const router = express.Router() //make a new router
 
