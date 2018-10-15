@@ -5,13 +5,13 @@ This project uses:
 
 [Mongo](https://www.mongodb.com/) for a NoSQL database.
 
-[Express](https://expressjs.com/) For an HTTP Server
+[Express](https://expressjs.com/) For an HTTP Server.
 
-[VueJS](https://vuejs.org/)
+[VueJS](https://vuejs.org/) Front-end Framework.
 
-[Node](https://nodejs.org/en/) For a JavaScript runtime
+[Node](https://nodejs.org/en/) For a JavaScript runtime.
 
-This project makes use of a logging utility I created called [trunks](https://github.com/aturingmachine/trunks).
+[trunks](https://github.com/aturingmachine/trunks) Logging utility.
 
 ## Installation
 
@@ -23,7 +23,6 @@ To install this project simply clone or download the repo:
 
 `npm install`
 
-add in your local Mongo URI **Changing the PORT variable in the .env will require you to change it in the `views/config/http.js` file.**
 
 ### Setup/Development
 
