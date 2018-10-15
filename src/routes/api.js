@@ -5,10 +5,13 @@
 
 const express = require('express')
 
-const userRoutes = require('./users') //use the user routes
+//use the user routes
+const userRoutes = require('./users')
 
-const router = express.Router() //make a new router
+//make a new router
+const router = express.Router()
 
-router.use('/users', userRoutes) //tell it to use the userRoutes
+//tell it to use the userRoutes
+router.use('/users', userRoutes)
 
 module.exports = router

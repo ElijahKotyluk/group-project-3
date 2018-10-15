@@ -1,8 +1,9 @@
 <template>
- <home :title="title"></home>
+ <app-header :title="title"></app-header>
 </template>
 
 <script>
+import AppHeader from './components/header/AppHeader.vue'
 import Home from './components/Home.vue'
 
 export default {
@@ -13,7 +14,8 @@ export default {
     }
   },
   components: {
-    Home
+    Home,
+    AppHeader
   }
 };
 </script>
