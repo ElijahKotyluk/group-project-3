@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const definition = {
   category: {
     type: String,
-    enum: ['Mental', 'Physical'],
+    enum: ['Mental', 'Physical', 'Challenges'],
     required: true
   },
   description: {
