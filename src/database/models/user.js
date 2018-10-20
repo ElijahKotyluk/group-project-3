@@ -14,7 +14,18 @@ const definition = {
   email: {
     type: String,
     required: true
-  }
+  },
+  activities: [{
+    id: {
+     type: mongoose.Schema.Types.ObjectId,
+     ref: 'Activity',
+     required: true
+    }, 
+    completed: {
+      type: Boolean,
+      default: false
+    }
+  }]
 }
 
 //Set any options for the schema

@@ -58,7 +58,7 @@ exports.store = async (req, res) => {
     //find the sneaky boye and make him go away
     await activity.findByIdAndRemove(req.params.id).exec()
     .then(() => {
-      log.success('Deleted activity: {}', req.params.id)
+      log.success('Deleted activity: {}', req.params.id) 
       //let em know there aint no content no mo
       res.status(204).json()
     })

@@ -83,3 +83,61 @@ exports.update = async (req, res) => {
       res.status(500).json({err: err})
     })
 }
+
+//show all activities of a specific user (can provide query of filtering activities by the completed property)
+exports.showActivities = async (req, res) => {
+  await User.findById(req.params.id).populate(activities).exec()
+  .then(user => {
+    const completed = req.query.completed;
+    let activities = user.activities;
+
+    if (completed === true) {
+      activities = activities.filter(activity => activity.completed === true)
+    }
+    else if (completed === false) {
+      activities = activities.filter(activity => activity.completed === false)
+    }
+
+    log.success('Found user: {}', user.name)
+    res.json({ activities: activities})
+  })
+  .catch(err => {
+    log.error(err, 'Error finding user: {}', req.params.id)
+    res.json({ error: err, message: 'Could not retrieve user'}).status(500)
+  })
+}
+
+//adding specific activity to user's array of activities
+exports.addActivity = async (req, res) => {
+  await User
+  .findByIdAndUpdate(req.params.id, 
+    {$push: {activities: {id: req.params.activityId, completed: false} }}, { new: true })
+  .exec()
+    .then(user => {
+      log.success('Updated user: {}', req.params.id)
+      res.status(200).json({user: user})
+    })
+    .catch(err => {
+      log.error(err, "Could not update user: {}", req.params.id)
+      res.status(500).json({err: err})
+    })
+}
+
+//updating users specific activity to completed
+exports.updateActivityCompleted = async (req, res) => {
+  await User
+  .update({"_id": req.params.id, "activities.id": req.params.activityId}, 
+    {$set: { "activities.$.completed": true} }, { new: true })
+  .exec()
+    .then(user => {
+      log.success('Updated user: {}', req.params.id)
+      res.status(200).json({user: user})
+    })
+    .catch(err => {
+      log.error(err, "Could not update user: {}", req.params.id)
+      res.status(500).json({err: err})
+    })
+}
+
+
+
