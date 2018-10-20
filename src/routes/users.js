@@ -23,4 +23,14 @@ router.delete('/:id', catchErrors(usersController.delete))
 //update a boy
 router.put('/:id', catchErrors(usersController.update))
 
+//show all activities that corresponds to user (can provide query of filtering activities by the completed property)
+router.get('/:id/activities', catchErrors(usersController.showActivities))
+
+//add a new activiity to a specific user
+router.post('/:id/activities/:activityId', catchErrors(usersController.addActivity))
+
+//update users specific activity that has been completed
+router.put('/:id/activities/:activityId', catchErrors(usersController.updateActivityCompleted))
+
+
 module.exports = router
