@@ -5,6 +5,7 @@
   </div>
 </template>
 
+
 <script>
 export default {
   name: 'AppHeader',
@@ -12,15 +13,16 @@ export default {
 }
 </script>
 
+
 <style lang="scss">
 .app-header {
   width: 100%;
-  height: 5em;
+  height: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(20, 55, 66, 1);
+  background-color: rgba(20, 55, 66, 0);
 }
 
 .header-title {
