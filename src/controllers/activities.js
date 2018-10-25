@@ -8,7 +8,7 @@ exports.index = async (req, res) => {
   
     //query the DB of all activities
     await Activity.find().exec()
-    .then(activiites => {
+    .then(activities => {
       log.success('Retrieved all {} activities', activities.length)
       res.json({ activities: activities})
     })
