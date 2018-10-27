@@ -20,7 +20,7 @@ const definition = {
      type: mongoose.Schema.Types.ObjectId,
      ref: 'Activity',
      required: true
-    }, 
+    },
     completed: {
       type: Boolean,
       default: false
@@ -36,5 +36,5 @@ const options = {
 //make the schema as a new instance of a mongoose schema, using our definition and options
 const userSchema = new mongoose.Schema(definition, options)
 
-//export that boye
+//export that user
 module.exports = mongoose.model('User', userSchema)
