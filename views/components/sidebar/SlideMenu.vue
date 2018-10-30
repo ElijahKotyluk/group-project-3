@@ -68,8 +68,7 @@ Our Zap Slideout styles...
   height: 100vh;
   padding: 30px;
   background-color: rgba(200, 200, 200, 0.24);
-  border: 5px solid rgba(32, 32, 32, 1);
-  border-radius: 1.25em;
+  border-right: 5px solid rgba(32, 32, 32, 1);
   transform: translateX(-100%);
   transition: transform 0.6s ease(out-cubic);
 
