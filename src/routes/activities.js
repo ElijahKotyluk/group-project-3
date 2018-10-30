@@ -11,16 +11,16 @@ const router = express.Router()
 //get all activities
 router.get('/', catchErrors(activitiesController.index))
 
-//make a new boy
+//make a new activity
 router.post('/', catchErrors(activitiesController.store))
 
-//see one boy
+//see one activity
 router.get('/:id', catchErrors(activitiesController.show))
 
-//get rid of a boy
+//get rid of an activity
 router.delete('/:id', catchErrors(activitiesController.delete))
 
-//update a boy
+//update an activity
 router.put('/:id', catchErrors(activitiesController.update))
 
 module.exports = router

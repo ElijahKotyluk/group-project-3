@@ -6,7 +6,6 @@ const mongoose = require('mongoose')
 //show all users
 exports.index = async (req, res) => {
   console.log("show all users")
-  
   //query the DB of all users
   await User.find().exec()
   .then(users => {
@@ -21,7 +20,7 @@ exports.index = async (req, res) => {
 
 //Store a new user
 exports.store = async (req, res) => {
-  
+
   let user = new User(req.body)
 
   //save it in the DB
@@ -41,7 +40,7 @@ exports.store = async (req, res) => {
 //this function is for looking at one user by their mongo id
 exports.show = async (req, res) => {
 
-  //find this sneaky boye
+  //find this sneaky user
   await User.findById(req.params.id).exec()
   .then(user => {
     log.success('Found user: {}', user.name)
@@ -53,10 +52,10 @@ exports.show = async (req, res) => {
   })
 }
 
-//ever wanted to make the users disappear 
+//ever wanted to make the users disappear
 exports.delete = async (req, res) => {
 
-  //find the sneaky boye and make him go away
+  //find the sneaky user and make him go away
   await User.findByIdAndRemove(req.params.id).exec()
   .then(() => {
     log.success('Deleted User: {}', req.params.id)
@@ -172,10 +171,3 @@ exports.updateActivityCompleted = async (req, res) => {
       res.status(500).json({err: err})
     })
 }
-
-
-
-
-
-
-
