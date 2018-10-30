@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './components/Home.vue'
-import Mental from './components/Mental.vue'
-import Physical from './components/Physical.vue'
+import Home from '../components/Home.vue'
+import Mental from '../components/Mental.vue'
+import Physical from '../components/Physical.vue'
 
 Vue.use(Router)
 
