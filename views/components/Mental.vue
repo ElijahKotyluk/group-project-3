@@ -1,5 +1,5 @@
 <template>
-  <div class="mental-container">
+  <div class="mental-container"></div>
 </template>
 
 
