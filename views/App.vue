@@ -15,6 +15,7 @@
 import AppHeader from './components/header/AppHeader.vue'
 import Home from './components/Home.vue'
 import SlideMenu from './components/sidebar/SlideMenu.vue'
+import anime from 'animejs'
 
 export default {
   name: 'App',

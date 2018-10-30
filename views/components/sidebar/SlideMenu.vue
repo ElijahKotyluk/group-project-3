@@ -4,8 +4,7 @@
       <div class="slideout-opener"
            @click="toggle">{{openerText}}</div>
       <ul class="slideout-menu">
-        <li class="slideout-menu-item"
-        	v-for="item in menu">{{item}}</li>
+        <li class="slideout-menu-item" v-for="item in menu" :key="item">{{item}}</li>
       </ul>
     </div>
 </template>
