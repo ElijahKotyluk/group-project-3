@@ -20,6 +20,10 @@ module.exports = {
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       },
       {
+        test: /\.svg$/,
+        loader: 'vue-svg-loader'
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {

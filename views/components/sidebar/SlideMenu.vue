@@ -4,7 +4,7 @@
       <div class="slideout-opener"
            @click="toggle">{{openerText}}</div>
       <ul class="slideout-menu">
-        <li class="slideout-menu-item" v-for="item in menu" :key="item">{{item}}</li>
+        <router-link class="slideout-menu-item" v-for="routes in links" v-bind:key="routes.id" :to="`${routes.page}`">{{routes.text}}</router-link>
       </ul>
     </div>
 </template>
@@ -17,7 +17,28 @@ export default {
     return {
       openerText: '>',
       isOpen: false,
-      menu: [ 'Home', 'Mental', 'Physical', 'Challenges' ],
+      links: [
+        {
+          id: 0,
+          text: 'Home',
+          page: '/'
+        },
+        {
+          id: 1,
+          text: 'Mental',
+          page: '/mental'
+        },
+        {
+          id: 2,
+          text: 'Physical',
+          page: '/physical'
+        },
+        {
+          id: 3,
+          text: 'Challenges',
+          page: '/challenges'
+        }
+      ]
     }
   },
   methods: {

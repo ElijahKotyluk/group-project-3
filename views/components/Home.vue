@@ -13,7 +13,7 @@
         </g>
         <polygon class="polymorph" stroke-width="1" stroke="currentColor" points="70 27.18219862061589 119.38681184584613 60.18181184584613 102.20406969569262 120.43882231230813 52.72688154153875 98.44880137938411 6.608198620615889 55.49212892492326 "></polygon>
       </g>
-    </svg> </div>  
+    </svg> </div>
       </div>
       <div class="mental">
         <h1>Mental</h1>
@@ -40,23 +40,28 @@
 
 
 <script>
-import anime from 'animejs'
-
-const morphing = anime({
-  targets: '#morphing .polymorph',
-  points: [
-    { value: '70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369' },
-    { value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369' },
-    { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
-    { value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' }
-  ],
-  easing: 'easeOutQuad',
-  duration: 2000,
-  loop: true
-});
 export default {
   name: 'Home',
-  props: ['title']
+  props: ['title'],
+  data () {
+    return {}
+  },
+  methods: {
+    morphing: function () {
+      anime({
+        targets: ".polymorph",
+        points: [
+          { value: '70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369' },
+          { value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369' },
+          { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+          { value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' }
+        ],
+        easing: 'easeOutQuad',
+        duration: 2000,
+        loop: true
+      });
+    }
+  }
 }
 </script>
 
