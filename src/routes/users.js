@@ -11,22 +11,22 @@ const router = express.Router()
 //get all users
 router.get('/', catchErrors(usersController.index))
 
-//make a new boy
+//make a new user
 router.post('/', catchErrors(usersController.store))
 
-//see one boy
+//see one user
 router.get('/:id', catchErrors(usersController.show))
 
-//get rid of a boy
+//get rid of a user
 router.delete('/:id', catchErrors(usersController.delete))
 
-//update a boy
+//update a user
 router.put('/:id', catchErrors(usersController.update))
 
 //show all activities that corresponds to user (can provide query of filtering activities by the completed property)
 router.get('/:id/activities', catchErrors(usersController.showActivities))
 
-//add a new activiity to a specific user
+//add a new activity to a specific user
 router.post('/:id/activities/:activityId', catchErrors(usersController.addActivity))
 
 //update users specific activity that has been completed
