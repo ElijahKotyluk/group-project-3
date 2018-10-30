@@ -1,7 +1,7 @@
 <template>
-  <div class="app">
+  <div id="app">
     <div class="sidebar-container">
-      <side-bar></side-bar>
+      <slide-menu></slide-menu>
     </div>
     <div class="content-container">
       <app-header :title="title"></app-header>
@@ -14,7 +14,7 @@
 <script>
 import AppHeader from './components/header/AppHeader.vue'
 import Home from './components/Home.vue'
-import SideBar from './components/sidebar/SideBar.vue'
+import SlideMenu from './components/sidebar/SlideMenu.vue'
 
 export default {
   name: 'App',
@@ -26,7 +26,7 @@ export default {
   components: {
     AppHeader,
     Home,
-    SideBar
+    SlideMenu
   }
 };
 </script>
@@ -35,7 +35,7 @@ export default {
 <style lang="scss">
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-.app {
+#app {
   background-image: url('../public/images/landscape.jpg');
   background-size: 100% 100%;
   position: fixed;
@@ -47,17 +47,6 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.sidebar-container {
-  width: 20%;
-  height: 100%;
-  margin: 0;
-  top: 0;
-  left: 0;
-  border: 5px solid rgba(32, 32, 32, 1);
-  border-radius: 1.25em;
-  background-color: rgba(200, 200, 200, 0.24);
 }
 
 .content-container {
