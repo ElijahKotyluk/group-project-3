@@ -88,6 +88,7 @@
 </div>
 
   </div>
+
 </template>
 
 
@@ -96,7 +97,7 @@
     name: 'Mental',
     data () {
       return {
-
+        activities: []
       }
     }
   }
