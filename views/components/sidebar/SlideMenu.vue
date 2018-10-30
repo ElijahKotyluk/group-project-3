@@ -6,8 +6,6 @@
       <ul class="slideout-menu">
         <li class="slideout-menu-item"
         	v-for="item in menu">{{item}}</li>
-        <li class="slideout-menu-item--small"
-        	v-for="item in smallMenu">{{item}}</li>
       </ul>
     </div>
 </template>
@@ -20,7 +18,7 @@ export default {
     return {
       openerText: '>',
       isOpen: false,
-      menu: [ 'Home', 'Mental', 'Physical' ],
+      menu: [ 'Home', 'Mental', 'Physical', 'Challenges' ],
     }
   },
   methods: {
@@ -53,8 +51,8 @@ export default {
 }
 
 .title {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .description {
@@ -85,7 +83,7 @@ Our Zap Slideout styles...
   top: 20px;
   left: 100%;
   margin-left: 20px;
-  font-weight: 600;
+  font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #fff;
@@ -97,8 +95,13 @@ Our Zap Slideout styles...
 }
 
 .slideout-menu {
-  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 300;
+  list-style-type: none;
   color: #fff;
+  padding: 0px;
 }
 
 .slideout-menu-item,
@@ -115,23 +118,6 @@ Our Zap Slideout styles...
 }
 
 .slideout-menu-item {
-  font-size: 36px;
-
-  & + .slideout-menu-item--small {
-    margin-top: 30px;
-  }
-}
-
-.slideout-menu-item--small {
   font-size: 18px;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #ecf0f1;
-}
-
-/* The famed Zap agency logo (TM) */
-.emoji {
-  height: 120px;
 }
 </style>
