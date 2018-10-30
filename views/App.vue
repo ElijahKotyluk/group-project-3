@@ -49,17 +49,6 @@ export default {
   justify-content: space-between;
 }
 
-.sidebar-container {
-  width: 20%;
-  height: 100%;
-  margin: 0;
-  top: 0;
-  left: 0;
-  border: 5px solid rgba(32, 32, 32, 1);
-  border-radius: 1.25em;
-  background-color: rgba(200, 200, 200, 0.24);
-}
-
 .content-container {
   width: 80%;
   height: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div class="mental-container"></div>
+  <div class="container"></div>
 </template>
 
 
@@ -8,7 +8,7 @@
     name: 'Mental',
     data () {
       return {
-
+        activities: []
       }
     }
   }
