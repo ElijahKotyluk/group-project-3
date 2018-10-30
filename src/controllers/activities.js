@@ -8,7 +8,7 @@ exports.index = async (req, res) => {
   
     //query the DB of all activities
     await Activity.find().exec()
-    .then(activiites => {
+    .then(activities => {
       log.success('Retrieved all {} activities', activities.length)
       res.json({ activities: activities})
     })
@@ -21,7 +21,7 @@ exports.index = async (req, res) => {
   //Store a new activity
 exports.store = async (req, res) => {
   
-    let activity = new activity(req.body)
+    let activity = new Activity(req.body)
   
     //save it in the DB
     await activity.save()
@@ -41,7 +41,7 @@ exports.store = async (req, res) => {
   exports.show = async (req, res) => {
   
     //find this sneaky boye
-    await activity.findById(req.params.id).exec()
+    await Activity.findById(req.params.id).exec()
     .then(activity => {
       log.success('Found activity: {}', activity.category)
       res.json({ activity: activity})
@@ -56,7 +56,7 @@ exports.store = async (req, res) => {
   exports.delete = async (req, res) => {
   
     //find the sneaky boye and make him go away
-    await activity.findByIdAndRemove(req.params.id).exec()
+    await Activity.findByIdAndRemove(req.params.id).exec()
     .then(() => {
       log.success('Deleted activity: {}', req.params.id) 
       //let em know there aint no content no mo
@@ -71,7 +71,7 @@ exports.store = async (req, res) => {
   
   //edit a activity based on ID
   exports.update = async (req, res) => {
-    await activity
+    await Activity
     .findByIdAndUpdate(req.params.id, req.body, { new: true })
     .exec()
       .then(activity => {

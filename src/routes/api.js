@@ -18,6 +18,6 @@ const router = express.Router()
 router.use('/users', userRoutes)
 
 //tell it to use the activityRoutes
-router.use('/activities', userRoutes)
+router.use('/activities', activityRoutes)
 
 module.exports = router

@@ -110,8 +110,8 @@ exports.showActivities = async (req, res) => {
 //adding specific activity to user's array of activities
 exports.addActivity = async (req, res) => {
   await User
-  .findByIdAndUpdate(req.params.id,
-    {$push: {activities: {id: req.params.activityId, completed: false} }}, { new: true })
+  .findByIdAndUpdate(req.params.id, 
+    {$push: {activities: {activityId: req.params.activityId, completed: false} }}, { new: true })
   .exec()
     .then(user => {
       log.success('Updated user: {}', req.params.id)
@@ -123,10 +123,10 @@ exports.addActivity = async (req, res) => {
     })
 }
 
-//updating users specific activity to completed
+//updating users specific activity completed
 exports.updateActivityCompleted = async (req, res) => {
   await User
-  .update({"_id": req.params.id, "activities.id": req.params.activityId},
+  .update({"_id": req.params.id, "activities.activityId": req.params.activityId}, 
     {$set: { "activities.$.completed": true} }, { new: true })
   .exec()
     .then(user => {
