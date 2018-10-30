@@ -16,7 +16,7 @@ const definition = {
     required: true
   },
   activities: [{
-    activity_Id: {
+    activityId: {
      type: mongoose.Schema.Types.ObjectId,
      ref: 'Activity',
      required: true

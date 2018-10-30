@@ -58,8 +58,7 @@ export default {
   border: 5px solid rgba(32, 32, 32, 1);
   border-radius: 1.25em;
   background-color: rgba(200, 200, 200, 0.24);
-}
-
+};
 .content-container {
   width: 80%;
   height: 100%;
