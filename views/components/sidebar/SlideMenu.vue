@@ -35,8 +35,8 @@ export default {
         },
         {
           id: 3,
-          text: 'Challenges',
-          page: '/challenges'
+          text: 'Activities',
+          page: '/Activities'
         }
       ]
     }
@@ -84,7 +84,6 @@ Our Zap Slideout styles...
  */
 .slideout {
   position: relative;
-  width: 240px;
   height: 100vh;
   padding: 30px;
   background-color: rgba(200, 200, 200, 0.24);
@@ -94,6 +93,7 @@ Our Zap Slideout styles...
 
   &.isOpen {
     transform: translateX(0);
+    width: 15%;
   }
 }
 

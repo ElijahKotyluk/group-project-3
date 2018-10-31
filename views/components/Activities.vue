@@ -14,7 +14,7 @@
 import { http } from '../config/http.js'
 
 export default {
-  name: 'Challenges',
+  name: 'Activities',
   data () {
     return {
       activities: []

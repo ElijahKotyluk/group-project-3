@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
-    <div class="row1">
-      <div class="physical">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-5-sm float-left physical">
         <h1>Physical</h1>
         <div id="morphing"> <svg width="140" height="140" viewBox="0 0 140 140">
       <g fill="none" fill-rule="evenodd">
@@ -15,7 +15,7 @@
       </g>
     </svg> </div>
       </div>
-      <div class="mental">
+      <div class="col-5-sm float-right mental">
         <h1>Mental</h1>
         <div id="morphing"> <svg width="140" height="140" viewBox="0 0 140 140">
       <g fill="none" fill-rule="evenodd">
@@ -30,7 +30,7 @@
     </svg> </div>
       </div>
     </div>
-    <div class="row2">
+    <div class="row">
       <div class="body-mind">
         <h1>Body and Mind Challenges</h1>
       </div>
@@ -67,14 +67,14 @@ export default {
 
 
 <style lang="scss">
-.container {
+.container-fluid {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 70%;
 }
 
-.row1 {
+.row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

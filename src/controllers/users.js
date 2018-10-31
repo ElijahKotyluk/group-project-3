@@ -123,7 +123,7 @@ exports.showActivities = async (req, res) => {
 exports.addActivity = async (req, res) => {
   console.log("add activity")
   await User
-  .findByIdAndUpdate(req.params.id, 
+  .findByIdAndUpdate(req.params.id,
     {$push: {activities: {activityId: req.body.activityId, completed: false} }},
     { new: true })
   .exec()
@@ -158,8 +158,8 @@ exports.updateActivityCompleted = async (req, res) => {
   }
 
   await User
-  .update({ "_id": req.params.id, "activities.activityId": req.params.activityId }, 
-    { $set: { "activities.$.completed": completed} }, 
+  .update({ "_id": req.params.id, "activities.activityId": req.params.activityId },
+    { $set: { "activities.$.completed": completed} },
     { new: true })
   .exec()
     .then(user => {
