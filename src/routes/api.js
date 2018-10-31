@@ -23,7 +23,4 @@ router.use('/users', userRoutes)
 //tell it to use the activityRoutes
 router.use('/activities', activityRoutes)
 
-//tell it to use the auth
-router.use('/api/auth', auth)
-
 module.exports = router

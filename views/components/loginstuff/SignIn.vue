@@ -12,6 +12,7 @@
 
 <script>
 import { http } from '../config/http.js'
+import axios from 'axios'
 
   export default {
     name: 'SignIn',
@@ -24,10 +25,21 @@ import { http } from '../config/http.js'
       }
     },
     methods: {
-      login() {
+      login(event) {
+          axios.post("http://localhost:8080/api/auth/login", this.input)
+          .then(response => {
+            localStorage.setItem('jwtToken', response.data.token)
+            console.log("Logged in successfully")
+            this.$router.push({
+              name: 'Home'
+            })
+          })
+          .catch(error => {
+            console.log(error)
+          })
+        }
       }
     }
-  }
 </script>
 
 

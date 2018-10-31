@@ -1,46 +1,25 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <sign-in></sign-in>
-    <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace>Logout</router-link>
-    <router-view @authenticated="setAuthenticated" />
+    <router-view />
   </div>
 </template>
 
 
 <script>
 import AppHeader from './components/header/AppHeader.vue'
-import SignIn from './components/SignIn.vue'
 import anime from 'animejs'
 
 export default {
   name: 'App',
   data () {
     return {
-      title: 'PM',
-      authenticated: false,
-      mockAccount: {
-        email: 'email@email.com',
-        password: 'securepassword'
-      }
+      title: 'PM'
     }
   },
-  mounted() {
-    if(!this.authenticated) {
-      this.$router.replace({ name: "login" })
-    }
-  },
-  methods: {
-    setAuthenticated(status) {
-      this.authenticated = status;
-    },
-    logout() {
-      this.authenticated = false;
-    }
-  },
+  methods: {},
   components: {
-    AppHeader,
-    SignIn
+    AppHeader
   }
 };
 </script>
