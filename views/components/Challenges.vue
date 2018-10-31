@@ -2,7 +2,8 @@
   <div class="container">
     <div class="list-group">
       <div class="list-group-item" v-for="activity in activities">
-
+        <h5>{{ activity.category }}</h5>
+        <p>{{ activity.description }}</p>
       </div>
     </div>
   </div>
@@ -39,4 +40,7 @@ export default {
 
 
 <style lang="scss">
+.container {
+  overflow: scroll;
+}
 </style>
