@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../components/Home.vue'
-import Mental from '../components/Mental.vue'
-import Physical from '../components/Physical.vue'
-import Activities from '../components/Activities.vue'
+import Register from '../components/Register.vue'
+import Login from '../components/Login.vue'
 
 Vue.use(Router)
 
@@ -11,23 +10,18 @@ export default new Router ({
   routes: [
     {
       path: '/',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: Home
-    },
-    {
-      path: '/mental',
-      name: 'Mental',
-      component: Mental
-    },
-    {
-      path: '/physical',
-      name: 'Physical',
-      component: Physical
-    },
-    {
-      path: '/activities',
-      name: 'Activities',
-      component: Activities
     }
   ]
 })

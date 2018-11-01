@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+    <app-header></app-header>
     <div class="row">
       <div class="col-5-sm float-left physical">
         <h1>Physical</h1>
@@ -40,6 +41,8 @@
 
 
 <script>
+import AppHeader from './header/AppHeader.vue'
+
 export default {
   name: 'Home',
   props: ['title'],
@@ -61,6 +64,9 @@ export default {
         loop: true
       });
     }
+  },
+  components: {
+    AppHeader
   }
 }
 </script>
