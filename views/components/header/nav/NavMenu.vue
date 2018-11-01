@@ -14,19 +14,19 @@ export default {
     return {
       links: [
         {
-          id: 1,
+          id: 0,
           text: 'Mental',
           page: '/mental'
         },
         {
-          id: 2,
+          id: 1,
           text: 'Physical',
           page: '/physical'
         },
         {
-          id: 3,
+          id: 2,
           text: 'Activities',
-          page: '/activities'
+          page: '/home'
         }
       ]
     }

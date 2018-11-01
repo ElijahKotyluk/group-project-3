@@ -33,6 +33,7 @@ import { http } from '../../config/http.js'
           .post("/auth/login", this.user)
           .then(response => {
             localStorage.setItem('jwtToken', response.data.token)
+            localStorage.setItem('user',JSON.stringify(response.data.user))
             console.log('log in successful')
             this.$router.push({
               name: 'Home'

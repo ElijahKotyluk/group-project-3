@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
+    <add-activity></add-activity>
     <div class="list-group">
       <div class="list-group-item" v-for="activity in activities" :key="activity">
         <h5>{{ activity.category }}</h5>
@@ -11,13 +12,19 @@
 
 
 <script>
+import AddActivity from './AddActivity.vue'
 import { http } from '../config/http.js'
 
 export default {
   name: 'Activities',
   data () {
     return {
-      activities: []
+      activities: [],
+      activity: {
+        name: '',
+        category: '',
+        description: ''
+      }
     }
   },
   created: function() {
@@ -34,13 +41,16 @@ export default {
         this.errors.push(e);
       });
     }
+  },
+  components: {
+    AddActivity
   }
 }
 </script>
 
 
 <style lang="scss">
-.container {
+.container-fluid {
   overflow: scroll;
 }
 </style>
