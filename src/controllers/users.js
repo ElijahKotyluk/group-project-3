@@ -29,7 +29,7 @@ exports.store = async (req, res) => {
     .then(user => {
       log.success('Created User: {}', user.email)
       //send a 201 and the new resource
-      res.status(201).json({ data: user })
+      res.status(200).json({ data: user })
     })
     .catch(err => {
       log.error(err, 'Error creating user: {}', user.email)

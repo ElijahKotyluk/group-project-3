@@ -12,13 +12,12 @@ export default new Router ({
     {
       path: '/',
       name: 'Home',
-      component: Home,
-      default: true
+      component: Home
     },
     {
       path: '/mental',
       name: 'Mental',
-      component: Mental,
+      component: Mental
     },
     {
       path: '/physical',

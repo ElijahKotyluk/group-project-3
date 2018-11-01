@@ -12,7 +12,7 @@ const userRoutes = require('./users')
 const activityRoutes = require('./activities')
 
 //use the auth auth routes
-const auth = require('./auth')
+const authRoutes = require('./auth')
 
 //make a new router
 const router = express.Router()
@@ -22,5 +22,8 @@ router.use('/users', userRoutes)
 
 //tell it to use the activityRoutes
 router.use('/activities', activityRoutes)
+
+//tell it to use the authRoutes
+router.use('/auth', authRoutes)
 
 module.exports = router

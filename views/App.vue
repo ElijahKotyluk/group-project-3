@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <app-header></app-header>
+    <register></register>
+    <sign-in></sign-in>
     <router-view />
   </div>
 </template>
@@ -8,6 +10,8 @@
 
 <script>
 import AppHeader from './components/header/AppHeader.vue'
+import Register from './components/loginstuff/Register.vue'
+import SignIn from './components/loginstuff/SignIn.vue'
 import anime from 'animejs'
 
 export default {
@@ -19,7 +23,9 @@ export default {
   },
   methods: {},
   components: {
-    AppHeader
+    AppHeader,
+    Register,
+    SignIn
   }
 };
 </script>

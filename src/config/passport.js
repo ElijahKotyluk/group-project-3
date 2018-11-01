@@ -3,7 +3,7 @@ const ExtractJwt = require('passport-jwt').ExtractJwt;
 
 // load up the user model
 const { User } = require('../database/models')
-const settings = require('../config/settings'); // get settings file
+const settings = require('./settings'); // get settings file
 
 module.exports = function(passport) {
   var opts = {};

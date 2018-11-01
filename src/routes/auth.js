@@ -4,6 +4,8 @@ const settings = require('../config/settings');
 require('../config/passport')(passport);
 const express = require('express');
 const jwt = require('jsonwebtoken');
+const trunks = require('trunks-log');
+const log = new trunks('Auth');
 const router = express.Router();
 const { User } = require('../database/models')
 
@@ -12,14 +14,18 @@ router.post('/register', function(req, res) {
     res.json({success: false, msg: 'Please pass username and password.'});
   } else {
     var newUser = new User({
-      username: req.body.email,
+      name: req.body.name,
+      age: req.body.age,
+      email: req.body.email,
       password: req.body.password
     });
     // save the user
     newUser.save(function(err) {
       if (err) {
+        log.error(err, 'Error creating user.')
         return res.json({success: false, msg: 'Email already exists.'});
       }
+      log.success('User registered.', user.name)
       res.json({success: true, msg: 'Successful created new user.'});
     });
   }
