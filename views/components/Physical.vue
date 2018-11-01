@@ -130,4 +130,38 @@
 
 
 <style lang="scss">
+.mental-container {
+  margin-right: 250px;
+}
+
+.card {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3c5bd+0,e86c57+40,ff6600+48,ff6600+48,ff6600+58,ff6600+74,ea2803+82,ea2803+82,c72200+100 */
+background: rgb(243,197,189); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(243,197,189,1) 0%, rgba(232,108,87,1) 40%, rgba(255,102,0,1) 48%, rgba(255,102,0,1) 48%, rgba(255,102,0,1) 58%, rgba(255,102,0,1) 74%, rgba(234,40,3,1) 82%, rgba(234,40,3,1) 82%, rgba(199,34,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(243,197,189,1) 0%,rgba(232,108,87,1) 40%,rgba(255,102,0,1) 48%,rgba(255,102,0,1) 48%,rgba(255,102,0,1) 58%,rgba(255,102,0,1) 74%,rgba(234,40,3,1) 82%,rgba(234,40,3,1) 82%,rgba(199,34,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(243,197,189,1) 0%,rgba(232,108,87,1) 40%,rgba(255,102,0,1) 48%,rgba(255,102,0,1) 48%,rgba(255,102,0,1) 58%,rgba(255,102,0,1) 74%,rgba(234,40,3,1) 82%,rgba(234,40,3,1) 82%,rgba(199,34,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd', endColorstr='#c72200',GradientType=0 ); /* IE6-9 */
+}
+
+.card-title {
+    animation: color-change 15s infinite;
+}
+    @keyframes color-change {
+        0% { color: rgb(0, 0, 0); }
+        15% {color: rgb(54, 54, 54);}
+        28% {color: rgb(95, 95, 95); }
+        40% {color: rgb(175, 175, 175);}
+        50% { color: rgb(255, 255, 255); }
+        65% {color: rgb(175, 175, 175);}
+        72% {color: rgb(95, 95, 95); }
+        80% {color: rgb(54, 54, 54);}
+        100% {color: rgb(0, 0, 0)}
+    }
+
+.card-text {
+  color: white;
+  text-shadow: 5px 7px 19px rgba(0, 0, 0, 1);
+  font-family: inherit;
+  text-align: center;
+}
 </style>
