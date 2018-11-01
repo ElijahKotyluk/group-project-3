@@ -2,14 +2,34 @@
   <div class="app-header">
     <h1 class="header-title">{{ title }}</h1>
     <h3 class="header-subtitle">Best Place For Body and Mind Practices</h3>
+    <nav-menu></nav-menu>
+    <button class="btn btn-md btn-primary btn-block" type="submit" @click="logout()">Logout</button>
   </div>
 </template>
 
 
 <script>
+import NavMenu from './nav/NavMenu.vue'
+
 export default {
   name: 'AppHeader',
-  props: ['title']
+  props: ['title'],
+  data () {
+    return {
+      title: 'PM'
+    }
+  },
+  methods: {
+    logout() {
+      localStorage.removeItem('jwtToken')
+      this.$router.push({
+        name: 'Login'
+      })
+    }
+  },
+  components: {
+    NavMenu
+  }
 }
 </script>
 
@@ -17,7 +37,7 @@ export default {
 <style lang="scss">
 .app-header {
   width: 100%;
-  height: 20%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;

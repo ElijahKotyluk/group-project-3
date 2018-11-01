@@ -9,12 +9,7 @@
 import anime from 'animejs'
 
 export default {
-  name: 'App',
-  data () {
-    return {
-      title: 'PM'
-    }
-  }
+  name: 'App'
 };
 </script>
 
@@ -26,6 +21,7 @@ export default {
   //background-image: url('../public/images/landscape.jpg');
   background-color: rgba(38, 41, 41, 1);
   background-size: 100% 100%;
+  position: fixed;
   width: 100%;
   height: 100%;
   margin: 0;

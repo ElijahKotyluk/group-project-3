@@ -14,7 +14,7 @@
 
 
 <script>
-import { http } from '../config/http.js'
+import { http } from '../../config/http.js'
 
   export default {
     name: 'Login',

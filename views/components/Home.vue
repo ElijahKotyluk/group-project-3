@@ -1,6 +1,7 @@
 <template>
   <div class="container-fluid">
     <app-header></app-header>
+    <router-view/>
     <div class="row">
       <div class="col-5-sm float-left physical">
         <h1>Physical</h1>
