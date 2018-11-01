@@ -37,7 +37,7 @@ export default {
 <style lang="scss">
 .app-header {
   width: 100%;
-  height: 40%;
+  height: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +49,14 @@ export default {
   font-family: fantasy;
   color: rgba(242, 241, 241, 1);
   margin: 0;
+    animation: color-change 7s infinite;
 }
+    @keyframes color-change {
+        0% { color: rgb(255, 255, 255); }
+        50% { color: rgb(132, 132, 255); }
+        100% { color: rgb(0, 60, 255); }
+    }
+
 
 .header-subtitle {
   font-family: cursive;
