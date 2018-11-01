@@ -10,6 +10,7 @@
       <input type="password" id="regPassword" v-model="user.password" class="form-control" placeholder="Password" required="">
       <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     </form>
+    <button class="btn btn-primary btn-block" type="submit" @click.stop="loginPage">Login</button>
   </div>
 </template>
 
@@ -62,6 +63,11 @@
       alert(success, callName, resource) {
         console.log('Add Alerting')
         this.$emit('alert', success, callName, resource)
+      },
+      loginPage() {
+        this.$router.push({
+          name: 'Login'
+        })
       }
     }
   }
