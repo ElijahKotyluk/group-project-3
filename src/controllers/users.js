@@ -18,8 +18,6 @@ exports.index = async (req, res) => {
   })
 }
 
-
-
 //Store a new user
 exports.store = async (req, res) => {
 
