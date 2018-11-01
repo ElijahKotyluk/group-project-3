@@ -14,11 +14,6 @@ export default {
     return {
       links: [
         {
-          id: 0,
-          text: 'Home',
-          page: '/'
-        },
-        {
           id: 1,
           text: 'Mental',
           page: '/mental'
@@ -31,7 +26,7 @@ export default {
         {
           id: 3,
           text: 'Activities',
-          page: '/Activities'
+          page: '/activities'
         }
       ]
     }

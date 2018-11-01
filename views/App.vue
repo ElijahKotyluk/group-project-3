@@ -1,15 +1,20 @@
 <template>
   <div id="app">
+    <app-header></app-header>
     <router-view/>
   </div>
 </template>
 
 
 <script>
+import AppHeader from './components/header/AppHeader.vue'
 import anime from 'animejs'
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    AppHeader
+  }
 };
 </script>
 
