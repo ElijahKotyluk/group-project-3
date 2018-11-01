@@ -9,10 +9,6 @@ const definition = {
     type: String,
     required: true
   },
-  password: {
-    type: String,
-    required: true
-  },
   age: {
     type: Number,
     required: true
@@ -23,7 +19,7 @@ const definition = {
     required: true
   },
   password: {
-    type: String, 
+    type: String,
     unique: true,
     required: true
   },
