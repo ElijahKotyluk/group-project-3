@@ -18,11 +18,12 @@ exports.index = async (req, res) => {
   })
 }
 
+
+
 //Store a new user
 exports.store = async (req, res) => {
 
   let user = new User(req.body)
-
   //save it in the DB
   await user.save()
     .then(user => {
