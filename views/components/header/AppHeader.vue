@@ -3,7 +3,7 @@
     <h1 class="header-title" :title="title">{{ title }}</h1>
     <h3 class="header-subtitle">Best Place For Body and Mind Practices</h3>
     <nav-menu></nav-menu>
-    <button class="btn btn-md btn-primary btn-block" type="submit" @click="logout()">Logout</button>
+    <button class="btn btn-primary btn-block" type="submit" @click="logout()">Logout</button>
   </div>
 </template>
 

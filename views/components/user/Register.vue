@@ -44,6 +44,9 @@
         .then(response => {
           this.submitDone = true
           this.alert(true, 'Create', 'User')
+          this.$router.push({
+            name: 'Login'
+          })
         }).catch(error => {
           this.submitDone = true
           this.alert(false, 'Create', 'User')
