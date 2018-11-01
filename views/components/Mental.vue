@@ -29,6 +29,7 @@
     </div>
   </div>
 </div>
+<br>
 
 <div class="row"> 
   <div class="col-sm-4">
@@ -58,6 +59,7 @@
     </div>
   </div>
 </div>
+<br>
 
 <div class="row"> 
   <div class="col-sm-4">
@@ -74,6 +76,7 @@
       <div class="card-body">
         <h5 class="card-title">MEDITATION</h5>
         <p class="card-text">[AUDIO}</p>
+        <audio controls></audio>
       </div>
     </div>
   </div>
@@ -82,6 +85,7 @@
       <div class="card-body">
         <h5 class="card-title">MEDITATION</h5>
         <p class="card-text">[AUDIO]</p>
+        <audio controls></audio>
       </div>
     </div>
   </div>
@@ -105,4 +109,39 @@
 
 
 <style lang="scss">
+.mental-container {
+  margin-right: 250px;
+}
+
+.card {
+background: rgb(30,87,153); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 41%, rgba(41,137,216,1) 41%, rgba(35,186,176,1) 80%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 41%,rgba(41,137,216,1) 41%,rgba(35,186,176,1) 80%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 41%,rgba(41,137,216,1) 41%,rgba(35,186,176,1) 80%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+border-bottom-color: aqua;
+}
+
+.card-title {
+    animation: color-change 15s infinite;
+}
+    @keyframes color-change {
+        0% { color: rgb(0, 0, 0); }
+        15% {color: rgb(54, 54, 54);}
+        28% {color: rgb(95, 95, 95); }
+        40% {color: rgb(175, 175, 175);}
+        50% { color: rgb(255, 255, 255); }
+        65% {color: rgb(175, 175, 175);}
+        72% {color: rgb(95, 95, 95); }
+        80% {color: rgb(54, 54, 54);}
+        100% {color: rgb(0, 0, 0)}
+    }
+
+.card-text {
+  color: white;
+  text-shadow: 5px 7px 19px rgba(0, 0, 0, 1);
+  font-family: inherit;
+  text-align: center;
+}
+
 </style>

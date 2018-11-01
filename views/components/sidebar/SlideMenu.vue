@@ -1,4 +1,6 @@
 <template>
+<div class="wrapper">
+  <nav id="sidebar" class="active">
   <div class="slideout"
          :class="{ isOpen: isOpen }">
       <div class="slideout-opener"
@@ -7,6 +9,8 @@
         <router-link class="slideout-menu-item" v-for="routes in links" v-bind:key="routes.id" :to="`${routes.page}`">{{routes.text}}</router-link>
       </ul>
     </div>
+  </nav>
+</div>
 </template>
 
 
@@ -15,7 +19,7 @@ export default {
   name: 'SlideMenu',
   data () {
     return {
-      openerText: '>',
+      openerText: '✌',
       isOpen: false,
       links: [
         {
@@ -35,19 +39,19 @@ export default {
         },
         {
           id: 3,
-          text: 'Activities',
-          page: '/Activities'
+          text: 'Challenges',
+          page: '/challenges'
         }
       ]
     }
   },
   methods: {
     open() {
-      this.openerText = '<';
+      this.openerText = '✌';
       this.isOpen = true;
     },
     close() {
-      this.openerText = '>';
+      this.openerText = '☝';
       this.isOpen = false;
     },
     toggle() {
@@ -63,6 +67,14 @@ export default {
 
 
 <style lang="scss">
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+
 .info {
   position: absolute;
   top: 50%; left: 50%;

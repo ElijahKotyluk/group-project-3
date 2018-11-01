@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="list-group">
-      <div class="list-group-item" v-for="activity in activities">
+      <div class="list-group-item" v-for="activity in activities" :key="activity">
         <h5>{{ activity.category }}</h5>
         <p>{{ activity.description }}</p>
       </div>
