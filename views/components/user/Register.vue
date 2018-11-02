@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid" id="register">
     <form class="form-signin" @submit="register">
       <h1 class="h3 mb-3 font-weight-normal">Register</h1>
       <label for="regName" class="sr-only">Username</label>
@@ -8,7 +8,7 @@
       <input type="email" id="regEmail" v-model="user.email" class="form-control" placeholder="Email register">
       <label for="regPassword" class="sr-only">Password</label>
       <input type="password" id="regPassword" v-model="user.password" class="form-control" placeholder="Password" required="">
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      <button class="btn btn-lg btn-primary btn-block" id="regist" type="submit">Register</button>
     </form>
     <button class="btn btn-primary btn-block" type="submit" @click.stop="loginPage">Login</button>
   </div>
@@ -72,3 +72,15 @@
     }
   }
 </script>
+
+<style lang="scss">
+#register {
+  width: 400px;
+  height: 300px;
+
+}
+
+#regist {
+  color: lightgreen;
+}
+</style>

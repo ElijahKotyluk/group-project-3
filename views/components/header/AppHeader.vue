@@ -1,9 +1,17 @@
 <template>
   <div class="app-header">
+    <div class="container-fuild">
+    
     <h1 class="header-title" :title="title">{{ title }}</h1>
     <h3 class="header-subtitle">Best Place For Body and Mind Practices</h3>
-    <nav-menu></nav-menu>
-    <button class="btn btn-primary btn-block" type="submit" @click="logout()">Logout</button>
+    <br>
+    <nav-menu class="nav-menu"></nav-menu>
+    <br>
+    
+    <button class="btn btn-md btn-primary btn-block" id="Sbutton" type="submit" @click="logout()">Logout</button>
+
+
+    </div>
   </div>
 </template>
 
@@ -42,12 +50,14 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: rgba(20, 55, 66, 0);
+  margin-top: 50px;
 }
 
 .header-title {
   font-family: fantasy;
   color: rgba(242, 241, 241, 1);
   margin: 0;
+  text-align: center;
     animation: color-change 7s infinite;
 }
     @keyframes color-change {
@@ -61,5 +71,13 @@ export default {
   font-family: cursive;
   color: rgba(242, 241, 241, 1);
   margin: 0;
+  text-align: center;
 }
+
+#Sbutton {
+  width: 100px;
+  height: 30px;
+  margin-right: 700px;
+}
+
 </style>
