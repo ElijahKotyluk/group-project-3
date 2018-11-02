@@ -1,9 +1,9 @@
 <template>
-  <div class="physical-container">
+  <div class="container-fluid">
 
 <div class="row"> 
   <div class="col-sm-3">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">STRETCH PRACTICES</h5>
         <p class="card-text">LStanding Hamstring Stretch - Stand tall with your feet hip-width apart, knees slightly bent, arms by your sides. 
@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="col-sm-3">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">STRETCH PRACTICES</h5>
         <p class="card-text">DTriceps Stretch - Kneel, sit, or stand tall with feet hip-width apart, arms extended overhead. Bend your right elbow and 
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="col-sm-3">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">STRETCH PRACTICES</h5>
         <p class="card-text">Butterfly Stretch - Sit tall on the floor with the soles of your feet together, knees bent out to sides. Hold onto your ankles or feet, 
@@ -33,7 +33,7 @@
     </div>
   </div>
     <div class="col-sm-3">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">STRETCH PRACTICES</h5>
         <p class="card-text"> Lunging Hip Flexor Stretch - Kneel on your left knee. Place your right foot flat on the floor in front of you, knee bent. Lean forward, 
@@ -46,7 +46,7 @@
 
 <div class="row"> 
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">CARDIO EXERCISES</h5>
         <p class="card-text">Power Walk - The point of speed walking is to flex and contract those leg muscles by walking at a fast 
@@ -57,7 +57,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">CARDIO EXERCISES</h5>
         <p class="card-text">Jogging Continuously - Be sure to stretch before and after. Attempt to start running at a medium 
@@ -68,7 +68,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">CARDIO EXERCISES</h5>
         <p class="card-text">Running - Self explainitory. Be sure to stretch before and after. Whether it be for long distance or short 
@@ -80,7 +80,7 @@
 
 <div class="row"> 
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">MUSCLE TONING EXERCISES</h5>
         <p class="card-text">Bicycle Kicks - This abdominal exercise requires you to lay on your back with your arms on your sides.
@@ -91,7 +91,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">MUSCLE TONING EXERCISES</h5>
         <p class="card-text">Push Ups - Start by getting on your belly and push yourself off the ground as many times as you can. The trick behind gaining 
@@ -101,7 +101,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardp">
       <div class="card-body">
         <h5 class="card-title">MUSCLE TONING EXERCISES</h5>
         <p class="card-text">Squats - This activity will not only help improve muscle tone to your legs but will help when lifting things off the ground 
@@ -130,11 +130,12 @@
 
 
 <style lang="scss">
-.mental-container {
+.container-fluid {
   margin-right: 250px;
+  overflow: scroll;
 }
 
-.card {
+#cardp {
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3c5bd+0,e86c57+40,ff6600+48,ff6600+48,ff6600+58,ff6600+74,ea2803+82,ea2803+82,c72200+100 */
 background: rgb(243,197,189); /* Old browsers */
 background: -moz-linear-gradient(top, rgba(243,197,189,1) 0%, rgba(232,108,87,1) 40%, rgba(255,102,0,1) 48%, rgba(255,102,0,1) 48%, rgba(255,102,0,1) 58%, rgba(255,102,0,1) 74%, rgba(234,40,3,1) 82%, rgba(234,40,3,1) 82%, rgba(199,34,0,1) 100%); /* FF3.6-15 */

@@ -36,4 +36,7 @@ export default {
 
 
 <style lang="scss">
+.nav-menu {
+  background-color: darkslategray;
+}
 </style>

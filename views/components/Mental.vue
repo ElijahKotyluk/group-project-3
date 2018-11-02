@@ -1,9 +1,9 @@
 <template>
-  <div class="mental-container">
+  <div class="container-fluid">
 
 <div class="row"> 
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">MUSCLE MEMORY</h5>
         <p class="card-text">Let the music play. Learn to play a musical instrument or join a choir. 
@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">MUSCLE MEMORY</h5>
         <p class="card-text">Do math in your head. Figure out problems without the aid of pencil, paper, or computer.</p>
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">MUSCLE MEMORY</h5>
         <p class="card-text">Refine your hand-eye abilities. 
@@ -33,7 +33,7 @@
 
 <div class="row"> 
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">SENSORY EXERCISE</h5>
         <p class="card-text">When eating out try to deconstruct and visualize what ingredients went in the dish, including subtle herbs and spices.</p>
@@ -41,7 +41,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">SENSORY EXERCISE</h5>
         <p class="card-text">When going out to start your day, simulate what you might encounter whether it be the smell of the coffee shop you go to 
@@ -50,7 +50,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">SENSORY EXERCISE</h5>
         <p class="card-text">Interact with a specific object like an orange, banana, a jacket or any object (works better with fruit) and run through 
@@ -63,7 +63,7 @@
 
 <div class="row"> 
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">MEDITATION</h5>
         <p class="card-text">Spend about 10-30min sitting or laying comfortably at a place where you feel most at easy. Practice and focus on your 
@@ -72,7 +72,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">MEDITATION</h5>
         <p class="card-text">[AUDIO}</p>
@@ -81,7 +81,7 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
+    <div class="card" id="cardm">
       <div class="card-body">
         <h5 class="card-title">MEDITATION</h5>
         <p class="card-text">[AUDIO]</p>
@@ -109,11 +109,13 @@
 
 
 <style lang="scss">
-.mental-container {
+
+.container-fluid {
   margin-right: 250px;
+  overflow: scroll;
 }
 
-.card {
+#cardm {
 background: rgb(30,87,153); /* Old browsers */
 background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 41%, rgba(41,137,216,1) 41%, rgba(35,186,176,1) 80%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 41%,rgba(41,137,216,1) 41%,rgba(35,186,176,1) 80%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
