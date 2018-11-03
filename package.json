@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "heroku-prebuild": "webpack",
+    "heroku-postbuild": "node -r dotenv/config ./bin/www",
     "start": "node -r dotenv/config ./bin/www",
     "dev:serve": "nodemon -r dotenv/config ./bin/www",
     "dev:client": "webpack-dev-server --port 3000 --open --inline --hot --content-base ./views",
